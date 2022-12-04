@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:padding="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.HomeActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/img_user"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:src="@drawable/ic_launcher_background"
+    app:shapeAppearanceOverlay="@style/Circular"/>
+
+    <ImageButton
+        android:id="@+id/img_btn_notif"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/notification"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/tv_hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_user"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Hello! Sigit"
+        android:textColor="@color/orange"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_where"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_hello"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Where are you going?"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_where"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/search_view_bg"
+        app:queryHint="Search..."
+        app:iconifiedByDefault="false"
+        app:queryBackground="@android:color/transparent"
+        />
+
+    <TextView
+        android:id="@+id/available_flights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Available Flights"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_below="@id/search_view"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:id="@+id/view_all_avalaible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View All"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="12dp"
+        android:textColor="#A9A8AE"
+        android:layout_below="@id/search_view"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentRight="true"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_avalable_flight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/available_flights"/>
+
+    <TextView
+        android:id="@+id/popular_places"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Popular Places"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_below="@id/rv_avalable_flight"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:id="@+id/view_all_places"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View All"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="12dp"
+        android:textColor="#A9A8AE"
+        android:layout_below="@id/rv_avalable_flight"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentRight="true"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_popular_places"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/popular_places"/>
+
+</RelativeLayout>
